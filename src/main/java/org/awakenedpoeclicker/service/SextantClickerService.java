@@ -14,6 +14,7 @@ public class SextantClickerService {
     public static void runSextantClicker() throws AWTException, InterruptedException {
         logger.log(Level.INFO, "Sextant clicker started");
         Robot sextantRobot = new Robot();
+        sextantRobot.delay(3000);
 
         int xSextantCoordinate = 1300;
         int ySextantCoordinate = 610;
