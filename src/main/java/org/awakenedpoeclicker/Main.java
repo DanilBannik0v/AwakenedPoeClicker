@@ -6,6 +6,8 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 import static org.awakenedpoeclicker.service.CurrencyClickerService.runCurrencyClicker;
+import static org.awakenedpoeclicker.service.OrbOfChanceClickerService.runOrbOfChaneClicker;
+import static org.awakenedpoeclicker.service.Service.getMouseCoordinates;
 import static org.awakenedpoeclicker.service.SextantClickerService.runSextantClicker;
 
 public class Main {
@@ -19,9 +21,7 @@ public class Main {
         }
 
         logger.info("Application started");
-        runCurrencyClicker();
-        boolean testLicense = true;
-        //runSextantClicker();
+        runOrbOfChaneClicker();
         logger.info("Application finished");
     }
 }

@@ -23,4 +23,11 @@ public class Service {
         serviceBot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
         serviceBot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
     }
+
+    public static void getMouseCoordinates() {
+        while(true){
+            System.out.println(MouseInfo.getPointerInfo().getLocation());
+            serviceBot.delay(1000);
+        }
+    }
 }
