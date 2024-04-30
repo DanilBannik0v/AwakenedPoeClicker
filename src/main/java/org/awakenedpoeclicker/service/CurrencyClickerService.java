@@ -8,13 +8,15 @@ import static org.awakenedpoeclicker.service.Service.*;
 
 public class CurrencyClickerService {
     private static final Logger logger = Logger.getLogger(CurrencyClickerService.class.getName());
+    private static final int CLICKER_DELAY = 3000;
+    private static final int ROBOT_DELAY = 150;
 
     public static void runCurrencyClicker() {
         logger.log(Level.INFO, "Currency clicker started");
         try{
             Point coordinate;
             Robot currencyRobot = new Robot();
-            currencyRobot.delay(3000);
+            currencyRobot.delay(CLICKER_DELAY);
 
             while(true) {
                 coordinate = MouseInfo.getPointerInfo().getLocation();
@@ -26,7 +28,7 @@ public class CurrencyClickerService {
                     }
                 }
                 mouseLeftClick();
-                currencyRobot.delay(150);
+                currencyRobot.delay(ROBOT_DELAY);
             }
         } catch (AWTException e) {
             logger.log(Level.SEVERE, "Currency clicker failed");

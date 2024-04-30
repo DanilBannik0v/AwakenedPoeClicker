@@ -9,12 +9,14 @@ import static org.awakenedpoeclicker.service.Service.*;
 public class SextantClickerService {
     private static final int STONE_X_COORDINATE = 980;
     private static final int STONE_Y_COORDINATE = 928;
+    private static final int ROBOT_DELAY = 125;
+    private static final int CLICKER_DELAY = 3000;
     private static final Logger logger = Logger.getLogger(SextantClickerService.class.getName());
 
     public static void runSextantClicker() throws AWTException, InterruptedException {
         logger.log(Level.INFO, "Sextant clicker started");
         Robot sextantRobot = new Robot();
-        sextantRobot.delay(3000);
+        sextantRobot.delay(CLICKER_DELAY);
 
         int xSextantCoordinate = 1300;
         int ySextantCoordinate = 610;
@@ -28,27 +30,27 @@ public class SextantClickerService {
         int counter = 0;
         for (int i = 0; i < 5;) {
             sextantRobot.mouseMove(xSextantCoordinate, ySextantCoordinate); //sextants -> compasses
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
             mouseRightClick();
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
             sextantRobot.mouseMove(STONE_X_COORDINATE, STONE_Y_COORDINATE);
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
             mouseLeftClick();
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
 
             sextantRobot.mouseMove(xCompassCoordinate, yCompassCoordinate);
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
             mouseRightClick();
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
             sextantRobot.mouseMove(STONE_X_COORDINATE, STONE_Y_COORDINATE);
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
             mouseLeftClick();
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
 
             sextantRobot.mouseMove(xItemCoordinate, yItemCoordinate);
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
             mouseLeftClick();
-            sextantRobot.delay(125);
+            sextantRobot.delay(ROBOT_DELAY);
 
             counter += 1;
             if (counter % 10 == 0){

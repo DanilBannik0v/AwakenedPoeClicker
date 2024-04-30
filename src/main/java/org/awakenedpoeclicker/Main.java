@@ -21,7 +21,7 @@ public class Main {
         }
 
         logger.info("Application started");
-        runOrbOfChaneClicker();
+        runCurrencyClicker();
         logger.info("Application finished");
     }
 }
